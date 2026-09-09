@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="RagApi.Tests/RagApi.Tests.csproj" />
+  <Project Path="RagApi/RagApi.csproj" />
+</Solution>

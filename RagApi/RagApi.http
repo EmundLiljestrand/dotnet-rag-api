@@ -1,0 +1,21 @@
+@RagApi_HostAddress = http://localhost:5148
+
+### Pulskoll
+GET {{RagApi_HostAddress}}/health
+
+### Indexera text
+POST {{RagApi_HostAddress}}/index
+Content-Type: application/json
+
+{
+  "documentId": "kaffe",
+  "text": "Espresso bryggs genom att pressa hett vatten under högt tryck genom finmalet kaffe. Bryggtiden är runt 25 sekunder. Bryggtemperaturen ligger mellan 90 och 96 grader. Franskpress är en annan metod, där kaffet får dra i vatten i fyra minuter innan det pressas ner med en sil. Malningsgraden är grov för franskpress och fin för espresso."
+}
+
+### Ställ en fråga
+POST {{RagApi_HostAddress}}/query
+Content-Type: application/json
+
+{
+  "question": "Hur länge ska espresso bryggas?"
+}
